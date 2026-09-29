@@ -1,0 +1,560 @@
+{
+  "queries": 400,
+  "seed": 2026,
+  "dataset_incidents": 16000,
+  "retrieval": {
+    "bm25": {
+      "precision_at_10": 0.936,
+      "mrr": 0.9714,
+      "ndcg_at_10": 0.9705,
+      "p50_ms": 0.747
+    },
+    "dense": {
+      "precision_at_10": 0.9425,
+      "mrr": 0.9642,
+      "ndcg_at_10": 0.9646,
+      "p50_ms": 1.105
+    },
+    "fusion": {
+      "precision_at_10": 0.9575,
+      "mrr": 0.9871,
+      "ndcg_at_10": 0.986,
+      "p50_ms": 1.462
+    },
+    "hybrid": {
+      "precision_at_10": 0.9765,
+      "mrr": 0.987,
+      "ndcg_at_10": 0.9869,
+      "p50_ms": 1.483
+    }
+  },
+  "diagnosis": {
+    "top1_accuracy": 0.9825,
+    "incident_recall": 0.9125
+  },
+  "recommendation": {
+    "routewright_top1_strong_rate": 0.9778,
+    "routewright_top1_strong_or_moderate_rate": 0.9778,
+    "routewright_harmful_in_recommendations_rate": 0.0,
+    "avoid_list_precision": 0.9667,
+    "naive_majority_vote_strong_rate": 0.6582,
+    "naive_success_vote_strong_rate": 0.731
+  },
+  "grounding": {
+    "verified_answer_rate": 1.0,
+    "mean_citation_precision": 1.0
+  },
+  "latency_ms": {
+    "p50": 4.18,
+    "p95": 7.06,
+    "p99": 9.19,
+    "mean": 4.5
+  },
+  "holdout": {
+    "queries": 30,
+    "retrieval": {
+      "precision_at_10": 0.8667,
+      "mrr": 0.8667,
+      "ndcg_at_10": 0.8667,
+      "p50_ms": 1.842
+    },
+    "diagnosis": {
+      "top1_accuracy": 0.8667,
+      "incident_recall": 0.9
+    },
+    "recommendation": {
+      "routewright_top1_strong_rate": 0.8667,
+      "routewright_top1_strong_or_moderate_rate": 0.8667,
+      "routewright_harmful_in_recommendations_rate": 0.0,
+      "avoid_list_precision": 0.9608,
+      "naive_majority_vote_strong_rate": 0.7333,
+      "naive_success_vote_strong_rate": 0.7333
+    }
+  },
+  "routing": {
+    "summary": {
+      "Routewright optimiser": {
+        "on_time_pct": 100.0,
+        "total_km": 754.52,
+        "vehicles_used": 10.08,
+        "overtime_minutes": 0.0,
+        "cost_gbp": 1301.54,
+        "runtime_ms": 1000.65
+      },
+      "Nearest neighbour, windows ignored": {
+        "on_time_pct": 51.82,
+        "total_km": 759.46,
+        "vehicles_used": 9.0,
+        "overtime_minutes": 195.08,
+        "cost_gbp": 1617.83,
+        "runtime_ms": 1.73
+      },
+      "Sweep territories": {
+        "on_time_pct": 50.93,
+        "total_km": 1243.92,
+        "vehicles_used": 9.0,
+        "overtime_minutes": 349.22,
+        "cost_gbp": 2066.33,
+        "runtime_ms": 0.15
+      },
+      "km_saving_vs_sweep_pct": 33.3,
+      "cost_saving_vs_sweep_pct": 36.8,
+      "cost_saving_vs_nearest_neighbour_pct": 19.3,
+      "plans_with_every_stop_on_time": 12,
+      "scenarios": 12
+    },
+    "methods": [
+      "Routewright optimiser",
+      "Nearest neighbour, windows ignored",
+      "Sweep territories"
+    ],
+    "scenarios": [
+      {
+        "area": "Dense Urban",
+        "promise": "One Hour Slot",
+        "stops": 90,
+        "fleet": 7,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 209.5,
+            "vehicles_used": 7,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1020.66,
+            "runtime_ms": 1000.4,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 28.9,
+            "total_km": 187.5,
+            "vehicles_used": 6,
+            "overtime_minutes": 188.2,
+            "cost_gbp": 1260.08,
+            "runtime_ms": 0.5,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 28.9,
+            "total_km": 234.0,
+            "vehicles_used": 6,
+            "overtime_minutes": 244.4,
+            "cost_gbp": 1355.23,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Dense Urban",
+        "promise": "Two Hour Slot",
+        "stops": 150,
+        "fleet": 12,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 280.2,
+            "vehicles_used": 11,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1407.95,
+            "runtime_ms": 1000.2,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 32.0,
+            "total_km": 266.3,
+            "vehicles_used": 9,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1813.72,
+            "runtime_ms": 1.4,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 27.3,
+            "total_km": 399.1,
+            "vehicles_used": 9,
+            "overtime_minutes": 107.0,
+            "cost_gbp": 1991.21,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Dense Urban",
+        "promise": "Next Day Untimed",
+        "stops": 200,
+        "fleet": 15,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 234.9,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 572.69,
+            "runtime_ms": 1000.9,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 100.0,
+            "total_km": 301.2,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 670.85,
+            "runtime_ms": 2.7,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 100.0,
+            "total_km": 523.9,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1000.67,
+            "runtime_ms": 0.2,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Urban",
+        "promise": "One Hour Slot",
+        "stops": 90,
+        "fleet": 7,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 467.3,
+            "vehicles_used": 7,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1161.85,
+            "runtime_ms": 1001.8,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 20.0,
+            "total_km": 373.2,
+            "vehicles_used": 6,
+            "overtime_minutes": 309.7,
+            "cost_gbp": 1410.27,
+            "runtime_ms": 0.9,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 16.7,
+            "total_km": 483.0,
+            "vehicles_used": 6,
+            "overtime_minutes": 626.5,
+            "cost_gbp": 1659.6,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Urban",
+        "promise": "Two Hour Slot",
+        "stops": 150,
+        "fleet": 12,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 540.3,
+            "vehicles_used": 11,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1525.22,
+            "runtime_ms": 1001.4,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 30.7,
+            "total_km": 493.9,
+            "vehicles_used": 9,
+            "overtime_minutes": 97.0,
+            "cost_gbp": 1966.98,
+            "runtime_ms": 1.5,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 36.7,
+            "total_km": 766.7,
+            "vehicles_used": 9,
+            "overtime_minutes": 277.8,
+            "cost_gbp": 2211.54,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Urban",
+        "promise": "Next Day Untimed",
+        "stops": 200,
+        "fleet": 15,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 476.4,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 757.42,
+            "runtime_ms": 1000.4,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 100.0,
+            "total_km": 613.7,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 913.52,
+            "runtime_ms": 2.8,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 100.0,
+            "total_km": 1181.5,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1559.39,
+            "runtime_ms": 0.4,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Suburban",
+        "promise": "One Hour Slot",
+        "stops": 90,
+        "fleet": 7,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 725.3,
+            "vehicles_used": 7,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1316.41,
+            "runtime_ms": 1000.1,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 21.1,
+            "total_km": 548.1,
+            "vehicles_used": 6,
+            "overtime_minutes": 319.7,
+            "cost_gbp": 1591.47,
+            "runtime_ms": 0.5,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 25.6,
+            "total_km": 865.8,
+            "vehicles_used": 6,
+            "overtime_minutes": 606.9,
+            "cost_gbp": 1840.16,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Suburban",
+        "promise": "Two Hour Slot",
+        "stops": 150,
+        "fleet": 12,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 773.2,
+            "vehicles_used": 11,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1619.6,
+            "runtime_ms": 1000.3,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 32.7,
+            "total_km": 816.6,
+            "vehicles_used": 9,
+            "overtime_minutes": 248.4,
+            "cost_gbp": 2210.35,
+            "runtime_ms": 1.5,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 29.3,
+            "total_km": 1225.6,
+            "vehicles_used": 9,
+            "overtime_minutes": 454.0,
+            "cost_gbp": 2564.34,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Suburban",
+        "promise": "Next Day Untimed",
+        "stops": 200,
+        "fleet": 15,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 712.4,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 912.19,
+            "runtime_ms": 1000.8,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 100.0,
+            "total_km": 989.4,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1179.62,
+            "runtime_ms": 4.1,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 100.0,
+            "total_km": 1946.5,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 2103.86,
+            "runtime_ms": 0.2,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Rural",
+        "promise": "One Hour Slot",
+        "stops": 90,
+        "fleet": 7,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 1405.2,
+            "vehicles_used": 7,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1642.82,
+            "runtime_ms": 1001.4,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 24.4,
+            "total_km": 1109.7,
+            "vehicles_used": 6,
+            "overtime_minutes": 766.6,
+            "cost_gbp": 2006.03,
+            "runtime_ms": 0.9,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 23.3,
+            "total_km": 1543.4,
+            "vehicles_used": 6,
+            "overtime_minutes": 772.5,
+            "cost_gbp": 2196.94,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Rural",
+        "promise": "Two Hour Slot",
+        "stops": 150,
+        "fleet": 12,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 1773.6,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 2260.77,
+            "runtime_ms": 1000.1,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 32.0,
+            "total_km": 1543.2,
+            "vehicles_used": 9,
+            "overtime_minutes": 411.4,
+            "cost_gbp": 2628.01,
+            "runtime_ms": 1.2,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 23.3,
+            "total_km": 2636.9,
+            "vehicles_used": 9,
+            "overtime_minutes": 1101.6,
+            "cost_gbp": 3518.89,
+            "runtime_ms": 0.1,
+            "unassigned_stops": 0
+          }
+        }
+      },
+      {
+        "area": "Rural",
+        "promise": "Next Day Untimed",
+        "stops": 200,
+        "fleet": 15,
+        "results": {
+          "Routewright optimiser": {
+            "on_time_pct": 100.0,
+            "total_km": 1456.0,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1420.9,
+            "runtime_ms": 1000.0,
+            "unassigned_stops": 0
+          },
+          "Nearest neighbour, windows ignored": {
+            "on_time_pct": 100.0,
+            "total_km": 1870.7,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 1763.0,
+            "runtime_ms": 2.8,
+            "unassigned_stops": 0
+          },
+          "Sweep territories": {
+            "on_time_pct": 100.0,
+            "total_km": 3120.6,
+            "vehicles_used": 12,
+            "overtime_minutes": 0.0,
+            "cost_gbp": 2794.13,
+            "runtime_ms": 0.2,
+            "unassigned_stops": 0
+          }
+        }
+      }
+    ]
+  },
+  "risk_models": {
+    "cost_over_two_weeks": {
+      "test_auc": 0.755,
+      "base_rate": 0.298
+    },
+    "detection_over_48_hours": {
+      "test_auc": 0.812,
+      "base_rate": 0.38
+    },
+    "repeat_within_90_days": {
+      "test_auc": 0.619,
+      "base_rate": 0.279
+    },
+    "incident_classifier": {
+      "top1_accuracy": 0.154,
+      "top3_accuracy": 0.358,
+      "chance_top1": 0.067
+    }
+  },
+  "examples": [
+    "We run ecommerce same day in a suburban area and we cannot charge all the electric vans overnight.",
+    "Help: drivers keep quitting and absence is through the roof.",
+    "We run meal kit subscription in a rural area and customers are receiving broken items and claims are soaring.",
+    "Help: the same few routes always run late while others are half empty.",
+    "Help: parcels are being left behind at the depot because every vehicle is full."
+  ]
+}

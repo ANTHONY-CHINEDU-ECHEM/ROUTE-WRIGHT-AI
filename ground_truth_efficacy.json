@@ -1,0 +1,192 @@
+{
+  "tiers": {
+    "strong": 0.85,
+    "moderate": 0.55,
+    "neutral": 0.25,
+    "harmful": 0.08
+  },
+  "incidents": {
+    "Delivery window misses": {
+      "strong": [
+        "Dynamic route optimisation with time windows",
+        "Slot capacity control linked to route plans"
+      ],
+      "moderate": [
+        "Measured service times per stop type",
+        "Time dependent traffic aware planning"
+      ],
+      "harmful": [
+        "Loading more stops onto each route",
+        "Extended driver shifts"
+      ]
+    },
+    "Failed first attempt deliveries": {
+      "strong": [
+        "Safe place, neighbour and locker options",
+        "Predictive ETA notifications"
+      ],
+      "moderate": [
+        "Self service rebooking before dispatch"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    },
+    "Route overruns": {
+      "strong": [
+        "Dynamic route optimisation with time windows",
+        "Measured service times per stop type"
+      ],
+      "moderate": [
+        "Workload balanced route allocation",
+        "Time dependent traffic aware planning"
+      ],
+      "harmful": [
+        "Extended driver shifts",
+        "Loading more stops onto each route"
+      ]
+    },
+    "Late depot departures": {
+      "strong": [
+        "Route sequenced wave loading"
+      ],
+      "moderate": [
+        "Real time control tower with exception alerts"
+      ],
+      "harmful": [
+        "Extended driver shifts"
+      ]
+    },
+    "Address and geocoding errors": {
+      "strong": [
+        "Address validation and rooftop geocoding"
+      ],
+      "moderate": [
+        "Route familiarity and consistent driver areas"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    },
+    "Vehicle capacity shortfall": {
+      "strong": [
+        "Flexible capacity pool with vetted subcontractors"
+      ],
+      "moderate": [
+        "Slot capacity control linked to route plans",
+        "Dynamic route optimisation with time windows"
+      ],
+      "harmful": [
+        "Loading more stops onto each route",
+        "Extended driver shifts"
+      ]
+    },
+    "Driver shortage and absence": {
+      "strong": [
+        "Driver retention programme and relief pool"
+      ],
+      "moderate": [
+        "Flexible capacity pool with vetted subcontractors",
+        "Route familiarity and consistent driver areas"
+      ],
+      "harmful": [
+        "Extended driver shifts"
+      ]
+    },
+    "Congestion driven delays": {
+      "strong": [
+        "Time dependent traffic aware planning",
+        "Urban micro hubs and cargo bike final mile"
+      ],
+      "moderate": [
+        "Dynamic route optimisation with time windows"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    },
+    "Electric van range shortfall": {
+      "strong": [
+        "Energy aware routing and charging schedule"
+      ],
+      "moderate": [
+        "Dynamic route optimisation with time windows"
+      ],
+      "harmful": [
+        "Loading more stops onto each route",
+        "Extended driver shifts"
+      ]
+    },
+    "Damaged deliveries": {
+      "strong": [
+        "Load securing standards and handling training"
+      ],
+      "moderate": [
+        "Route sequenced wave loading"
+      ],
+      "harmful": [
+        "Loading more stops onto each route",
+        "Extended driver shifts"
+      ]
+    },
+    "Proof of delivery disputes": {
+      "strong": [
+        "Geotagged photo proof of delivery"
+      ],
+      "moderate": [
+        "Safe place, neighbour and locker options"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    },
+    "Access and restriction breaches": {
+      "strong": [
+        "Site access and restriction database"
+      ],
+      "moderate": [
+        "Urban micro hubs and cargo bike final mile",
+        "Route familiarity and consistent driver areas"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    },
+    "Customer notification failures": {
+      "strong": [
+        "Predictive ETA notifications",
+        "Real time control tower with exception alerts"
+      ],
+      "moderate": [
+        "Self service rebooking before dispatch"
+      ],
+      "harmful": [
+        "Extended driver shifts"
+      ]
+    },
+    "Unbalanced route allocation": {
+      "strong": [
+        "Workload balanced route allocation",
+        "Dynamic route optimisation with time windows"
+      ],
+      "moderate": [
+        "Measured service times per stop type"
+      ],
+      "harmful": [
+        "Extended driver shifts"
+      ]
+    },
+    "Missed collections and returns": {
+      "strong": [
+        "Collections integrated into daily route plans"
+      ],
+      "moderate": [
+        "Dynamic route optimisation with time windows",
+        "Real time control tower with exception alerts"
+      ],
+      "harmful": [
+        "Loading more stops onto each route"
+      ]
+    }
+  }
+}

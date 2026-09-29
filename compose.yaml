@@ -1,0 +1,6 @@
+services:
+  routewright:
+    build: .
+    ports: ["8000:8000"]
+    environment:
+      ROUTEWRIGHT_LLM_PROVIDER: extractive
